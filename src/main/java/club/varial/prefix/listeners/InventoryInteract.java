@@ -15,7 +15,9 @@ public class InventoryInteract implements Listener {
     @EventHandler
     public void onInventoryInteract(InventoryClickEvent event) {
         Player player = (Player) event.getWhoClicked();
-        if (event.getView().getTitle() == PrefixManager.INSTANCE.guiName.replace("&", "§")) {
+        System.out.println("A");
+        if (event.getView().getTitle() == PrefixManager.INSTANCE.guiName) {
+            System.out.println("B");
             ItemStack item = event.getCurrentItem();
 
             event.setCancelled(true);

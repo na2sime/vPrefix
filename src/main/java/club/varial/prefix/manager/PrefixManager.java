@@ -63,7 +63,7 @@ public class PrefixManager {
             Bukkit.getServer().getConsoleSender().sendMessage("§7-> §a" + prefix.getName());
         }
 
-        this.guiName = Main.INSTANCE.getConfig().getString("gui-name");
+        this.guiName = Main.INSTANCE.getConfig().getString("gui-name").replace("&", "§");
         this.shopLink = Main.INSTANCE.getConfig().getString("shop-link");
         this.available = Main.INSTANCE.getConfig().getString("available");
         this.unavailable = Main.INSTANCE.getConfig().getString("unavailable");
@@ -78,7 +78,7 @@ public class PrefixManager {
 
     public void openGui(Player player) {
 
-        Inventory inventory = Bukkit.createInventory(null, 54, this.guiName.replace("&", "§"));
+        Inventory inventory = Bukkit.createInventory(null, 54, this.guiName);
 
         for (int i = 0; i < prefixesLoaded.size(); i++) {
 
