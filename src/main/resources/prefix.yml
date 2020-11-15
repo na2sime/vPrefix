@@ -1,0 +1,7 @@
+Prefix-List:
+  Example1:
+    Material: BOOK
+    Display: "&7[&bExample1&7]"
+  Example2:
+    Material: PAPER
+    Display: "&7[&cExample2&7]"

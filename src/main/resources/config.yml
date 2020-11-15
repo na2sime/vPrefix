@@ -1,0 +1,15 @@
+#=================================================#
+#                      vPrefix                    #
+#                  Author: NA2SIME                #
+#           https://discord.gg/QvV3mVtfPX         #
+#=================================================#
+
+#Permission for prefix: vprefix.use.name <--- The name is in prefix.yml config
+
+
+gui-name: "&bvPrefix &7- &fSelect a prefix:"
+no-permission: "&cYou don't have this prefix"
+shop-link: "&fwww.your-website.com"
+available: "&aAvailable"
+unavailable: "&cUnavailable"
+activated-prefix: "&aYou have now &f%prefix% &ais now activated!"

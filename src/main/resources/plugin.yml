@@ -1,0 +1,10 @@
+name: vPrefix
+main: club.varial.prefix.Main
+version: 1.0.0
+author: NA2SIME
+
+commands:
+  vprefix:
+    description: Main prefix command
+    permission: vprefix.use
+    aliases: [ prefix, vp ]
