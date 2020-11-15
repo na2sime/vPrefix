@@ -1,0 +1,11 @@
+
+.DS_Store
+target/ZIIROX.json
+*.jar
+*.lst
+*.properties
+*.class
+*.iml
+*.yml
+*.xml
+*.log
