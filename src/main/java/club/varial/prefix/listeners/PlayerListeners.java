@@ -33,12 +33,12 @@ public class PlayerListeners implements Listener {
         Player player = event.getPlayer();
         World world = player.getWorld();
 
-        String vprefix = ProfilesManager.INSTANCE.getProfile(player).getPrefix().getDisplay();
         String group = chat.getPrimaryGroup(player);
         String prefix = chat.getGroupPrefix(world, group);
         String suffix = chat.getGroupSuffix(world, group);
 
         if (ProfilesManager.INSTANCE.getProfile(player).getPrefix() != null) {
+            String vprefix = ProfilesManager.INSTANCE.getProfile(player).getPrefix().getDisplay();
             event.setFormat(ChatColor.translateAlternateColorCodes('&',
                     vprefix + " " + prefix + event.getPlayer().getName() + suffix + " : &r" + event.getMessage()));
         } else {

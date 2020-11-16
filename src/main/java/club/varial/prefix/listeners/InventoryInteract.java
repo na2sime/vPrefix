@@ -3,6 +3,7 @@ package club.varial.prefix.listeners;
 import club.varial.prefix.manager.PrefixManager;
 import club.varial.prefix.manager.ProfilesManager;
 import club.varial.prefix.objet.Prefix;
+import org.bukkit.Material;
 import org.bukkit.craftbukkit.v1_8_R3.inventory.CraftItemStack;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -35,6 +36,12 @@ public class InventoryInteract implements Listener {
                     } else {
                         player.sendMessage(PrefixManager.INSTANCE.noPermission.replace("&", "§"));
                     }
+                }
+                if (item.getType().equals(Material.BARRIER)) {
+
+                    ProfilesManager.INSTANCE.getProfile(player).setPrefix(null);
+                    player.sendMessage(PrefixManager.INSTANCE.desactivated.replace("&", "§"));
+
                 }
             }
         }

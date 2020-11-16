@@ -2,6 +2,7 @@ package club.varial.prefix.manager;
 
 import club.varial.prefix.Main;
 import club.varial.prefix.objet.Prefix;
+import club.varial.prefix.utils.ItemBuilder;
 import net.minecraft.server.v1_8_R3.NBTTagCompound;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -37,6 +38,8 @@ public class PrefixManager {
     private String unavailable;
     public String activated;
     public String noPermission;
+    public String desactivated;
+    public String guiDesactivator;
 
     public PrefixManager() {
 
@@ -69,6 +72,8 @@ public class PrefixManager {
         this.unavailable = Main.INSTANCE.getConfig().getString("unavailable");
         this.activated = Main.INSTANCE.getConfig().getString("activated-prefix");
         this.noPermission = Main.INSTANCE.getConfig().getString("no-permission");
+        this.desactivated = Main.INSTANCE.getConfig().getString("desactivated-prefix");
+        this.guiDesactivator = Main.INSTANCE.getConfig().getString("gui-desactivator");
 
     }
 
@@ -113,6 +118,10 @@ public class PrefixManager {
             inventory.setItem(i, itemStack);
 
         }
+
+        inventory.setItem(49,
+                new ItemBuilder(Material.BARRIER, 1, (short) 0,
+                        this.guiDesactivator.replace("&", "§"), "").create());
 
         player.openInventory(inventory);
 
