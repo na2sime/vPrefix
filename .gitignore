@@ -1,0 +1,9 @@
+
+.DS_Store
+*.xml
+*.iml
+*.class
+*.yml
+*.properties
+*.lst
+*.jar
