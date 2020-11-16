@@ -2,6 +2,8 @@ name: vPrefix
 main: club.varial.prefix.Main
 version: 1.0.0
 author: NA2SIME
+depend:
+  - Vault
 
 commands:
   vprefix:

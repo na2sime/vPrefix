@@ -15,9 +15,7 @@ public class InventoryInteract implements Listener {
     @EventHandler
     public void onInventoryInteract(InventoryClickEvent event) {
         Player player = (Player) event.getWhoClicked();
-        System.out.println("A");
         if (event.getView().getTitle() == PrefixManager.INSTANCE.guiName) {
-            System.out.println("B");
             ItemStack item = event.getCurrentItem();
 
             event.setCancelled(true);
@@ -35,7 +33,7 @@ public class InventoryInteract implements Listener {
                         player.sendMessage(PrefixManager.INSTANCE.activated.
                                 replace("&", "§").replace("%prefix%", prefix.getName()));
                     } else {
-                        player.sendMessage("§cVous n'avez pas la permissions !");
+                        player.sendMessage(PrefixManager.INSTANCE.noPermission.replace("&", "§"));
                     }
                 }
             }
