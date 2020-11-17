@@ -9,3 +9,4 @@ target/ZIIROX.json
 *.yml
 *.xml
 *.log
+*.schematic

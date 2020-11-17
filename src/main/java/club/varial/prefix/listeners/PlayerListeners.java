@@ -39,11 +39,18 @@ public class PlayerListeners implements Listener {
 
         if (ProfilesManager.INSTANCE.getProfile(player).getPrefix() != null) {
             String vprefix = ProfilesManager.INSTANCE.getProfile(player).getPrefix().getDisplay();
-            event.setFormat(ChatColor.translateAlternateColorCodes('&',
-                    vprefix + " " + prefix + event.getPlayer().getName() + suffix + " : &r" + event.getMessage()));
+            event.setFormat(
+                    vprefix.replace("&", "§")
+                    + " " + prefix.replace("&", "§")
+                    + event.getPlayer().getName()
+                    + suffix.replace("&", "§")
+                    + " : &r" + event.getMessage());
         } else {
-            event.setFormat(ChatColor.translateAlternateColorCodes('&',
-                    prefix + event.getPlayer().getName() + suffix + " : &r" + event.getMessage()));
+            event.setFormat(
+                    prefix.replace("&", "§")
+                    + event.getPlayer().getName()
+                    + suffix.replace("&", "§")
+                    + " : &r" + event.getMessage());
         }
     }
 
